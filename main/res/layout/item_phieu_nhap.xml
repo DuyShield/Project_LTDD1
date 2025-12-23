@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@android:color/white"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/tv_item_ten_sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#03A9F4"
+        tools:text="Tên Sản Phẩm: Mẫu A" />
+
+    <TextView
+        android:id="@+id/tv_item_thong_tin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="SL: 50 | TT: Đã nhập | NCC: Cty B | Ngày: 2025-12-16"
+        android:textSize="14sp"
+        android:textColor="#607D8B"/>
+</LinearLayout>

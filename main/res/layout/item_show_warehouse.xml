@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E3F7FC"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="3dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:background="#FFFFFF"
+            android:src="@android:drawable/btn_star_big_off" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtWarehouseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kho: Thuốc trừ sâu ABC"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/txtSoLuong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Số lượng: 150"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtTrangThai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trạng thái: Đầy đủ"
+                android:textSize="14sp"
+                android:textColor="#00A000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnEdit"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:text="✏️"
+                    android:textSize="16sp"
+                    android:backgroundTint="#7E57C2"
+                    android:textColor="#FFFFFF"/>
+
+                <Button
+                    android:id="@+id/btnDelete"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="4dp"
+                    android:text="🗑️"
+                    android:textSize="16sp"
+                    android:backgroundTint="#E53935"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnDetail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:minWidth="0dp"
+                android:text="Chi tiết"
+                android:textSize="12sp"
+                android:backgroundTint="#3F51B5"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

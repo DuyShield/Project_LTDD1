@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".index">
+    <!--Thanh tiêu đề-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#FFEB3B">
+
+        <!--Icon bên trái-->
+        <ImageView
+            android:id="@+id/imgLogoApp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/iconapp"
+            android:contentDescription="@string/app_name" />
+
+        <!--Tiêu đề-->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quản Lý Kho Hàng Offline"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <!--Title Main Screen-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menu Kho Hàng Offline"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:background="#FFFFFF"/>
+    <!--Đường viền border bottom-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#007FBA"/>
+    <!--Thông tin người đăng nhập-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="#FFFDE7">
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xin chào:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/tvRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quyền:"
+            android:textSize="14sp"
+            android:textColor="#555555"/>
+    </LinearLayout>
+    <!--Đường viền border bottom-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#007FBA"/>
+    <!--Menu Chức Năng-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_marginTop="50sp"
+            android:layout_marginBottom="20sp"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:text="Quản lý kho hàng"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:id="@+id/btnFormKho"
+            android:background="@drawable/botron"/>
+        <Button
+            android:layout_margin="20sp"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:text="Quản lý sản phẩm"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:id="@+id/btnFormSanPham"
+            android:background="@drawable/botron"/>
+        <Button
+            android:layout_margin="20sp"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:text="Lọc sản phẩm"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:id="@+id/btnFormFiler"
+            android:background="@drawable/botron_an_id"/>
+        <Button
+            android:layout_margin="20sp"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:text="Xuất/Nhập Kho"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:id="@+id/btnFormXN"
+            android:background="@drawable/botron_an_id"/>
+        <Button
+            android:layout_margin="20sp"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:text="Đăng xuất"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:id="@+id/btnDX"
+            android:background="@drawable/botron_an_id"/>
+    </LinearLayout>
+
+</LinearLayout>

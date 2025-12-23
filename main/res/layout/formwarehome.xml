@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D4F3FF"
+    tools:context=".UI_WareHouse.Formwarehouse">
+
+    <LinearLayout
+        android:id="@+id/contentWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F4E65B"
+            android:padding="10dp"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="#CCCCCC"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phần Mềm Quản Lý Sản Phẩm Offline"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#000000" />
+            <!--Nút thoát-->
+            <ImageView
+                android:id="@+id/imgExitWH"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:contentDescription="Thoát" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#7BD0F2"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quản Lý Kho Hàng"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_vertical">
+
+            <!--Thanh search-->
+            <EditText
+                android:id="@+id/edtSearchKho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tìm theo ID hoặc tên kho"
+                android:padding="10dp"
+                android:background="@android:drawable/edit_text"
+                android:inputType="text"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvShow"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:text="+"
+        android:textSize="30sp"
+        android:backgroundTint="#00C853"
+        android:textColor="#FFFFFF"
+        android:elevation="6dp"
+        android:translationZ="6dp"
+        android:stateListAnimator="@null" />
+
+</RelativeLayout>

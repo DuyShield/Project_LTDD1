@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D4F3FF"
+    tools:context=".Updatewarehouse">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F4E65B"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#CCCCCC"
+            android:layout_marginEnd="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phần Mềm Quản Lý Sản Phẩm Offline"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7BD0F2"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sửa Kho Hàng"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#E3F7FC"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="#FFFFFF"  android:layout_marginEnd="16dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:id="@+id/btnChangeImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thay đổi ảnh"
+                        android:backgroundTint="#7E57C2"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Định dạng: JPG, PNG (tối đa 5MB)"
+                        android:textSize="12sp"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kho Hàng *"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp" />
+            <EditText
+                android:id="@+id/edtTenKho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập kho"
+                android:background="#FFFFFF" android:padding="10dp"
+                android:autofillHints="name"
+                android:inputType="text"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số lượng *"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp" />
+            <EditText
+                android:id="@+id/edtSoLuong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập số lượng"
+                android:inputType="number"
+                android:background="#FFFFFF" android:padding="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trạng thái *"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp" />
+            <Spinner
+                android:id="@+id/spItem_Update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:entries="@array/item"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ghi chú"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp" />
+            <EditText
+                android:id="@+id/edtGhiChu"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="top"
+                android:hint="Thêm ghi chú..."
+                android:background="#FFFFFF" android:padding="10dp"
+                android:autofillHints="note"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/btnSaveChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lưu thay đổi"
+                android:textSize="16sp"
+                android:backgroundTint="#00C853"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hủy"
+                android:textSize="16sp"
+                android:backgroundTint="#FF0000"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cập nhật lần cuối: 15/12/2025"
+                android:layout_gravity="center_horizontal"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

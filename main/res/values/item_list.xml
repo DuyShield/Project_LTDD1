@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="item_list">
+        <item>Còn hàng</item>
+        <item>Hết hàng</item>
+        <item>Tạm hết</item>
+        <item>Ngưng nhập hàng</item>
+    </string-array>
+</resources>

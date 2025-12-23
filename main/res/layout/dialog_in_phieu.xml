@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="8dp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp"
+        android:gravity="center_horizontal"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phiếu In"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#F44336"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Xuất file :"
+                android:textSize="18sp"
+                android:textColor="#000000" />
+
+            <Spinner
+                android:id="@+id/spn_in_phieu"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="35dp"
+                android:text=".PNG/.PDF"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:background="#80D8FF"
+                android:paddingHorizontal="8dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_dialog_in_phieu"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="In phiếu"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#5C89A8"
+                android:layout_marginEnd="10dp"
+                android:paddingHorizontal="15dp"
+                android:minHeight="0dp" />
+
+            <Button
+                android:id="@+id/btn_dialog_huy_in"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Hủy"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#F44336"
+                android:layout_marginStart="10dp"
+                android:paddingHorizontal="15dp"
+                android:minHeight="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

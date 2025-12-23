@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context=".UI_Product.MainActivity">
+
+    <!--Thanh tiêu đề-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#FFEB3B">
+
+        <!--Icon bên trái-->
+        <ImageView
+            android:id="@+id/imgLogoApp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/iconapp"
+            android:contentDescription="@string/app_name" />
+
+        <!--Tiêu đề-->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quản Lý Kho Hàng Offline"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <!--Nút thoát-->
+        <ImageView
+            android:id="@+id/imgExit"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="Thoát" />
+    </LinearLayout>
+    <!--Title Main Screen-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh Sách Sản Phẩm"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:background="#D2F4FF"/>
+    <!--Đường viền border bottom-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#007FBA"/>
+    <!--Thanh search-->
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tìm theo ID hoặc tên sản phẩm"
+        android:padding="10dp"
+        android:background="@android:drawable/edit_text"
+        android:inputType="text"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        />
+    <!--Đường viền border bottom-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#007FBA"/>
+    <!--Danh sách chứa item-->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <!--Button thêm mới-->
+    <Button
+        android:id="@+id/btnAdd_MS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="20sp"
+        android:text="Thêm mới"
+        android:textSize="20sp"
+        android:backgroundTint="#00FF11"/>
+    <!--Thông báo xóa thành oông-->
+    <TextView
+        android:id="@+id/tvNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xóa thành công!"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:background="#FFEB3B"
+        android:visibility="gone"/>
+</LinearLayout>

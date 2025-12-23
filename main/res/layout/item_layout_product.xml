@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/itemProduct">
+    <!--Item 1-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--Icon sản phẩm-->
+        <ImageView
+            android:id="@+id/logoProduct"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/botron_img"
+            android:layout_margin="40sp"
+            android:clipToOutline="true"/>
+        <!--Thông tin sản phẩm 1-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp">
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên Sản Phẩm: Ghế Nhựa"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/tvSL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số lượng: 12"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/tvTT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trạng thái: Còn hàng"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/tvK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kho: Còn hàng"
+                android:textSize="15sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10sp"
+                android:gravity="end">
+                <!--Button sửa-->
+                <Button
+                    android:id="@+id/btnUpForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update"
+                    android:backgroundTint="#E6D66F"/>
+                <!--Button xóa-->
+                <Button
+                    android:id="@+id/btnDelForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:text="Xóa"
+                    android:textSize="15sp"
+                    android:backgroundTint="#F44336"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!--Đường viền border bottom-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+</LinearLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0FFF0">
+
+    <!--Thanh tiêu đề-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#FFEB3B">
+
+        <!--Icon bên trái-->
+        <ImageView
+            android:id="@+id/imgLogoApp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/iconapp"
+            android:contentDescription="@string/app_name" />
+
+        <!--Tiêu đề-->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quản Lý Kho Hàng Offline"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <!--Nút thoát-->
+        <ImageView
+            android:id="@+id/imgExitSF"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="Thoát" />
+    </LinearLayout>
+    <!--Title Main Screen-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lọc Sản Phẩm"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:background="#D2F4FF"/>
+    <!--Đường viền border bottom-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#007FBA"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="1. Tìm kiếm theo Tên:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edt_keyword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập tên sản phẩm để tìm..." />
+            <Button
+                android:id="@+id/btn_search_apply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tìm kiếm và Áp dụng Lọc" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:text="2. Lọc theo Trạng thái (Optional):"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioGroup
+                android:id="@+id/rg_status"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <RadioButton
+                    android:id="@+id/rb_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tất cả"
+                    android:checked="true"
+                    android:layout_marginEnd="12dp"/>
+                <RadioButton
+                    android:id="@+id/rbCH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Còn hàng"
+                    android:layout_marginEnd="12dp"/>
+                <RadioButton
+                    android:id="@+id/rbHH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hết hàng"
+                    android:layout_marginEnd="12dp"/>
+                <RadioButton
+                    android:id="@+id/rbTH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tạm hết"/>
+            </RadioGroup>
+
+            <TextView
+                android:text="3. Sắp xếp theo Số lượng:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioGroup
+                android:id="@+id/rg_quantity_sort"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <RadioButton
+                    android:id="@+id/rb_no_sort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Không sắp xếp"
+                    android:checked="true"
+                    android:layout_marginEnd="12dp"/>
+                <RadioButton
+                    android:id="@+id/rb_asc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tăng dần"/>
+                <RadioButton
+                    android:id="@+id/rb_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giảm dần"/>
+            </RadioGroup>
+
+            <TextView
+                android:text="Danh sách Sản Phẩm:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_products"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1F5FE"
+    tools:context=".xuat_nhap.main">
+
+    <TextView
+        android:id="@+id/tv_app_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quản lý kho"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:padding="20dp"
+        android:background="#03A9F4"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/layout_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_title">
+
+        <Button
+            android:id="@+id/btn_nhap_kho"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Nhập kho"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#4CAF50"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_danh_sach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh Sách"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#607D8B"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_buttons" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_trang_thai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_danh_sach">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trạng thái kho"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTonKho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Tồn kho: [Giá trị]" />
+            <TextView
+                android:id="@+id/tvTamHet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tạm hàng: [Giá trị]" />
+            <TextView
+                android:id="@+id/tvHetHang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hết hàng: [Giá trị]" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_thong_ke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/card_trang_thai">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thống kê"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+            <TextView
+                android:id="@+id/tvTongKho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng số lượng kho: [Giá trị]"
+                android:paddingTop="8dp" />
+            <TextView
+                android:id="@+id/tvTongSanPham"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng sản phẩm: [Giá trị]"/>
+            <TextView
+                android:id="@+id/tvTongNhap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng nhập: [Giá trị]"/>
+
+            <TextView
+                android:id="@+id/tvTongXuat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng xuất: [Giá trị]" />
+
+            <TextView
+                android:id="@+id/tvTongTien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng tiền: [Giá trị]" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_thoat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thoát"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
